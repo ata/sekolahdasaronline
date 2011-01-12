@@ -1,0 +1,16 @@
+
+Django Applications in Sekolah Dasar Online Project:
+
+    - Province
+    - District (in indonesian is Kabupaten/City)
+    - SubDistrict
+    - Religion
+    - Address
+    - UserProfile
+    - School
+    - Grade
+    - ClassRoom
+    - Subject
+    - Exercise
+    - HTMLContent
+    

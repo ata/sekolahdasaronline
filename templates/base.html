@@ -1,0 +1,53 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    {% load media %}
+    {% include_media 'main.css' media='screen, projection' %}
+    {% include_media 'print.css' media='print' %}
+    
+    
+    <!--[if lt IE 8]>{% include_media 'ie.css' media='screen, projection' %}<![endif]-->
+    {% include_media 'mootools-core.js' %}
+    {% block extra_media %}
+    {% endblock extra_media %}
+    <title>Sekolah Dasar Online - {% block head_title %}{% endblock %}</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <div class="span-18" id="webname">
+                <h1>Sekolah Dasar Online: {% block title%} {% endblock title%}</h1>
+            </div>
+            <div class="span-6 last" id="headmenu">
+                
+            </div>
+        </div>
+    </div>
+    
+    <div id="main">
+        <div class="container">
+            <div class="span-24 last breadcrumbs">
+                {% block breadcrumbs %}
+                <ul>
+                    <li>Home</li>
+                </ul>
+                {% endblock breadcrumbs %}
+            </div>
+            {% block main %}
+                sdsd
+            {% endblock %}
+        </div>
+    </div>
+    
+    <div id="footer">
+        <div class="container">
+            <p>Ini adalah footer.</p>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+{% extends "siswa.html" %}
+{% block title%} Tambah Siswa : {{ step }} dari {{ step_count}} step {%endblock title%}
+
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Data Pribadi Siswa</legend>
+        {% for field in form %}
+        <div class="row">
+            {{ field.errors }}
+            {{ field.label_tag }}
+            {{ field }}
+        </div>
+        {% endfor %}
+    </fieldset>
+    
+    <input type="hidden" name="{{ step_field }}" value="{{ step0 }}" />
+    {{ previous_fields|safe }}
+
+    
+    <div class="row buttons">
+        <button type="submit">Next</button>
+        <button type="submit" disabled="disabled" class="disabled">Finish</button>
+    </div>
+</form>
+{% endblock content %}

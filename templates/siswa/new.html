@@ -1,0 +1,31 @@
+{% extends "siswa.html" %}
+{% block title%} Tambah Siswa {%endblock title%}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Data Pribadi</legend>
+        <table class="form">
+        {{ form }}
+        </table>
+        
+    </fieldset>
+    <fieldset>
+        <legend>Data Orang Tua</legend>
+        <fieldset class="span-10">
+            <legend>Ayah</legend>
+            <table class="form">
+                {{ form.form_ayah }}
+            </table>
+        </fieldset>
+        <fieldset class="span-10 last">
+            <legend>Ibu</legend>
+            <table class="form">
+                {{ form.form_ibu }}
+            </table>
+        </fieldset>
+    </fieldset>
+    <input type="submit" value="Simpan Data"/>
+</form>
+{% endblock content %}
