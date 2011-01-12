@@ -8,3 +8,4 @@ _generated_media*
 __MAC__
 .pydevproject
 *.~
+local_settings.py
